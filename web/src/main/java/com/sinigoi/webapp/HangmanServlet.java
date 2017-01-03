@@ -79,7 +79,7 @@ public class HangmanServlet extends HttpServlet {
         }
     }
 
-    public void createNewGame(HttpServletRequest request, HttpServletResponse response, String sessionId) throws IOException, ServletException {
+    private void createNewGame(HttpServletRequest request, HttpServletResponse response, String sessionId) throws IOException, ServletException {
         String obscuredWord = gameCenter.startNewGame(sessionId);
         Game game = gameCenter.getGame(sessionId);
         sendResponse(request, response, game, obscuredWord, NEW_GAME_STRING);
