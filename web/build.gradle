@@ -1,0 +1,14 @@
+apply plugin: "war"
+apply plugin: "jetty"
+
+dependencies {
+    compile project(":utils")
+    compile "javax.servlet:servlet-api:2.5"
+    compile "com.google.code.gson:gson:2.8.0"
+    providedCompile group: 'javax.servlet', name: 'javax.servlet-api', version: '3.0.1'
+    testCompile "junit:junit:4.12"
+}
+
+httpPort = 8080
+stopPort = 9090
+stopKey = "stopKey"

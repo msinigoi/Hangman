@@ -1,0 +1,8 @@
+#hangmanWord {
+    letter-spacing: 3px;
+    font-size: 500%;
+}
+
+#hangmanLog {
+    color:gray;
+}
